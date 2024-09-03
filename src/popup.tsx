@@ -1,13 +1,12 @@
-import { CountButton } from "~features/count-button"
+import { useEffect } from "react"
 
-import "~style.css"
+function Popup() {
+  useEffect(() => {
+    chrome.tabs.create({ url: "chrome://newtab" })
+    window.close()
+  }, [])
 
-function IndexPopup() {
-  return (
-    <div className="plasmo-flex plasmo-items-center plasmo-justify-center plasmo-h-16 plasmo-w-40">
-      <CountButton />
-    </div>
-  )
+  return null
 }
 
-export default IndexPopup
+export default Popup

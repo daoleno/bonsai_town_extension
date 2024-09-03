@@ -1,6 +1,6 @@
 {
   "name": "bonsai-town-extension",
-  "displayName": "Bonsai town extension",
+  "displayName": "Bonsai Town Extension",
   "version": "0.0.1",
   "description": "bonsai.town extension",
   "author": "daoleno",
@@ -28,6 +28,12 @@
   "manifest": {
     "host_permissions": [
       "https://*/*"
-    ]
+    ],
+    "chrome_url_overrides": {
+      "newtab": "newtab.html"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    }
   }
 }

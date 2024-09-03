@@ -1,33 +1,30 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# Bonsai Town Extension
 
-## Getting Started
+This Chrome extension replaces the new tab page with bonsai.town.
 
-First, run the development server:
+## Features
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+- Opens bonsai.town in a new tab while keeping the "New Tab" title
+- Clicking the extension icon also opens bonsai.town in a new tab
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+## Development
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+This extension is built using [Plasmo](https://docs.plasmo.com/).
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+1. Install dependencies:
+   ```bash
+   bun install
+   ```
 
-## Making production build
+2. Run the development server:
+   ```bash
+   bun dev
+   ```
 
-Run the following:
+3. Load the extension in Chrome:
+   - Go to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the `build/chrome-mv3-dev` directory
 
-```bash
-pnpm build
-# or
-npm run build
-```
-
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+## Building for Production
